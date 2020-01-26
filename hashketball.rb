@@ -260,7 +260,6 @@ def winning_team
         data.each dp |player|
         home_score += player[:points]
     end
-  end
 end
 end
 end
