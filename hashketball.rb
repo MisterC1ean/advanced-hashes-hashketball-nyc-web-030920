@@ -286,6 +286,26 @@ def player_with_longest_name
       end
     end
   end
-  return longest_name
+return longest_name
 end
 
+def long_name_steals_a_ton?
+  steal_king = "placeholder"
+  no_of_steals = 0
+  game_hash.each do |place, team|
+    team.each do |attribute, data|
+      if attribute == :players
+        data.each do |player|
+        if player[:steals] > no_of_steals
+          steal_king = player[:player_name]
+          no_of_steals = player[:steals]
+          end
+        end
+      end
+    end
+  end
+  if player_with_longest_name = steal_king
+    return true
+  else
+    return false
+end
