@@ -243,4 +243,26 @@ leading_scorer ="placeholder"
   return leading_scorer
 end
 
+def winning_team
+  home_score = 0
+  away_score = 0
+  game_hash.each do |place, team|
+    if place == :away
+      team.each do |attribute, data|
+        if attribute == :players
+          data.each do |player|
+            away_score += player[:points]
+          end
+        end
+      end
+    else team.each do |attribute, data|
+      if attribute == :players
+        data.each dp |player|
+        home_score += player[:points]
+    end
+  end
+end
+end
+end
+end
 
