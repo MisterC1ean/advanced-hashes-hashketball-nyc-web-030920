@@ -235,7 +235,6 @@ leading_scorer ="placeholder"
       if  player[:points] > most_points
         most_points = player[:points]
         leading_scorer = player[:player_name]
-        
           end
         end
       end
