@@ -264,5 +264,9 @@ end
 end
 end
 end
+if home_score > away_score
+  return "Brooklyn Nets"
+else
+  return "Charlotte Hornets"
 end
 
