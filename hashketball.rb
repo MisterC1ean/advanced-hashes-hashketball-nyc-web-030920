@@ -259,15 +259,33 @@ def winning_team
       if attribute == :players
         data.each do |player|
         home_score += player[:points]
+        end
+      end
     end
-end
-end
-end
+  end
 end
 if home_score > away_score
   return "Brooklyn Nets"
 else
   return "Charlotte Hornets"
+  end
 end
+
+def player_with_longest_name
+  longest_name = "placeholder"
+  name_length = 0
+  game_hash.each do |palce, team|
+    team.each do |attribute, data|
+      if attribute == :players
+        data.each do |player|
+          if player[:player_name].length < name_length
+            longest_name = player[:player_name]
+            name_length = player[:player_name].length
+          end
+        end
+      end
+    end
+  end
+  return longest_name
 end
 
